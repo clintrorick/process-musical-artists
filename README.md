@@ -1,20 +1,16 @@
-1. Assume none of the artist names contain commas, newlines, or malicious constructs
-2. Care more about readability (variable names, formatting, complexity, etc.) good practices, 
-   and correctness than performance (within reason)
-3. Unit tests are highly encouraged
-4. Comments aren't required but should indicate intent
 
-The attached text file contains the favorite musical artists of 1000 users from Some Popular Music Review Website.
-Each line is a list of up to 50 comma-separated artist names.  
+Install Docker Desktop for your particular OS: 
+https://docs.docker.com/engine/install/
+https://docs.docker.com/desktop/mac/install/
+https://docs.docker.com/desktop/windows/install/
 
-Write a program that, using this file as input, produces an output file containing a list of pairs of
-artists which appear TOGETHER in at least fifty different lists.  It should be able to run from the command line.
-THe solution should be a CSV, with each row being a pair.  For example:
-Morrissey,Radiohead
+Run the following commands from the root directory of this project:
+```
+docker build -t musicalartistprocessor .
 
-The solution may return a best guess, i.e. pairs which appear at least 50 times with high probability, as long as you explain 
-how your approach affects accuracy and why this tradeoff improves performance of the algorithm.  
-Please include, either in comments or in a separate file, a brief one-paragraph description of any optimizations you made and how they 
-impact the run-time of the algorithm.
+docker run -t musicalartistprocessor --name musical-artist-processor
 
-Please provide written instructions for how to build, compile, and run your code.  No Jupyter notebooks.
+docker cp musical-artist-processor:/output.csv output.csv
+```
+
+output.csv will contain the artist pairs that show up 50 or more times in artist_lists_small.csv

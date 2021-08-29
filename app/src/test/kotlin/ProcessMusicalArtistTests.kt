@@ -1,3 +1,6 @@
+import org.clintrorick.ArtistPair
+import org.clintrorick.RawUserArtistListFromInputCsv
+import org.clintrorick.findArtistPairsOccuringAtLeastThisManyTimes
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Test
 import kotlin.test.assertTrue

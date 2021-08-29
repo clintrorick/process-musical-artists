@@ -1,16 +1,17 @@
-import java.io.File
+package org.clintrorick
 
+import java.io.File
 
 class IngestMusicalArtistListsFromCsv {
 
-    private val pathToInputFile = "src/main/resources/artist_lists_small.csv"
+    private val pathToInputFile = "/app/artist_lists_small.csv"
 
     fun doIt() : List<RawUserArtistListFromInputCsv> {
         return File(pathToInputFile)
             .readLines(Charsets.UTF_8)
             .map{ userArtistRow -> userArtistRow.split(",") }
             .map{ it.toSet() }
-            .map { RawUserArtistListFromInputCsv(it)}
+            .map { RawUserArtistListFromInputCsv(it) }
     }
 
 }

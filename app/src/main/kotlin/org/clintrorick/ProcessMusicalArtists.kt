@@ -1,4 +1,5 @@
-/**
+package org.clintrorick
+    /**
      * Assumptions in addition to those provided in the assignment instructions:
      * 1) The data in the input CSV has been pre-processed so that artists are uniquely identified by a case-and-whitespace-sensitive string representation of their name.
      *          E.g. "franz ferdinand", "Franz Ferdinand", and "FranzFerdinand" are treated by this algorithm as separate artists.
