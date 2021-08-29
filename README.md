@@ -8,7 +8,7 @@ Run the following commands from the root directory of this project:
 ```
 docker build -t musicalartistprocessor .
 
-docker run -t musicalartistprocessor --name musical-artist-processor
+docker run --name musical-artist-processor musicalartistprocessor
 
 docker cp musical-artist-processor:/output.csv output.csv
 ```
